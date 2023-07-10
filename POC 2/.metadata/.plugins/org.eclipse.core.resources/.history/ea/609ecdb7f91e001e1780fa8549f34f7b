@@ -1,0 +1,19 @@
+package com.service1.service;
+
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.stereotype.Service;
+
+@Service
+public class Producer {
+
+	@Autowired
+	private KafkaTemplate<String, Map<String, String>> kafkaTemplate;
+	
+	public void sendMessageToTopic(Map<String, String> data) {
+		kafkaTemplate.send("service1_topic", data);
+	}
+	
+}

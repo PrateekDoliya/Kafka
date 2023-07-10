@@ -1,0 +1,14 @@
+package com.kafka.demo.service;
+
+import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.stereotype.Service;
+
+@Service
+public class Consumer {
+
+	@KafkaListener(topics = "myFirst_topic", groupId = "12345")
+	public void listenToTopic(String receivedMessage) {
+		System.out.println("the message received is: "+ receivedMessage);
+	}
+	
+}

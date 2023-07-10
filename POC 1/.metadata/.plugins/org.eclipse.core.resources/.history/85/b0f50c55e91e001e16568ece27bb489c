@@ -1,0 +1,12 @@
+package com.kafka.demo.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class Consumer {
+
+	public void listenToTopic(String receivedMessage) {
+		System.out.println("the message received is: "+ receivedMessage);
+	}
+	
+}

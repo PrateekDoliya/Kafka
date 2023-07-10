@@ -1,0 +1,16 @@
+package com.service1.controller;
+
+import java.util.Map;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HomeController {
+
+	public ResponseEntity<String> getMessage(@RequestBody Map<String, String> data) {
+		
+	}
+	
+}
